@@ -1,0 +1,36 @@
+---
+title: "Getting Started with Next.js 14"
+date: "2024-11-15"
+description: "A quick guide to setting up a Next.js 14 project with the App Router."
+tags: ["nextjs", "react", "tutorial"]
+---
+
+# Getting Started with Next.js 14
+
+Next.js 14 brought some great improvements. Here's a quick setup guide.
+
+## Create a Project
+
+```bash
+npx create-next-app@latest my-app
+cd my-app
+npm run dev
+```
+
+## App Router
+
+The App Router uses a file-based routing system in the `app/` directory:
+
+- `app/page.tsx` → `/`
+- `app/about/page.tsx` → `/about`
+- `app/blog/[slug]/page.tsx` → `/blog/:slug`
+
+## Server Components
+
+By default, all components in the App Router are **Server Components**. Add `'use client'` at the top of a file to make it a Client Component.
+
+> Server Components can fetch data directly without useEffect or external libraries.
+
+## Summary
+
+Next.js 14 is a solid choice for building modern web apps. The App Router, Server Components, and built-in optimizations make it a great developer experience.
